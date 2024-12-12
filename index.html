@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "x-UA-Compatible" content = "IE = edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal-Portfolio</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?callback=getUserLocation"></script>
+    <script src="https://kit.fontawesome.com/cb1b3bc05d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="asset/me.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact" id="contact-btn">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick = "closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header">
+                <div class="header-text">
+                    <h1>Hi, I'm <span>Bemnet</span> Ayalew <br> From Ethiopia</h1>
+
+                    <p>Full Stack Website and Mobile App Developer</p>
+
+                    <div class="buttons">
+                        <a href="./asset/Bemnet Ayalew CV.pdf" download class="btn-cv">Download CV</a>
+                        <a href="#contact" class="btn-cv">Contact Me</a>
+                    </div>
+
+                </div>
+                <div class="hero">
+                    <img src="./asset/hero.jpg" alt="My Photo" id="hero" width="450vh">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===== about ===== -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="asset/port 1.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello!🖐 I'm Bemnet Ayalew, a Software Engineering student at Bahir Dar University. 
+                        As a passionate web developer, I specialize in crafting web applications that prioritize seamless performance and intuitive user experiences. 
+                        My technical foundation is strong in HTML, CSS, JavaScript, and React.
+                    </p>
+                    <br>
+                    <p>To further enhance my skills, I've been actively building my web development expertise by taking online courses. 
+                        I started with foundational HTML and CSS courses on ALX, then delved deeper into JavaScript and React via Udemy. 
+                        Currently, I'm expanding my skillset by focusing on UI/UX design principles at Pluralsight. 
+                        I've applied my knowledge to real-world projects, honing my abilities and gaining practical experience.
+                    </p>
+                    <br>
+                    <p>Beyond technical proficiency, I'm a collaborative team player with a keen eye for detail and a strong problem-solving mindset. 
+                        I'm eager to contribute my skills to a team and work alongside talented individuals to create exceptional digital products.
+                    </p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">🛠 Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">🥇 Education</p>
+                        <p class="tab-links" onclick="opentab('address')">📌 Address</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <div>
+                            <ul>
+                                <h3>Front-end</h3>
+                                <li>
+                                    <span>
+                                        <img src="./asset/icons/HTML5.png" alt="HTML5" width="30px" height="30px"/>
+                                        <a href="https://github.com/gayalew/alx_html_css" 
+                                        alt="A project done with HTML & CSS">HTML5</a><br>
+                                    </span>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-fill" id="html" style="width: 95%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>
+                                        <img src="./asset/icons/CSS3.png" alt="CSS3" width="30px" height="30px"/>
+                                        <a href="https://github.com/gayalew/alx_html_css" 
+                                        alt="A project done with HTML & CSS">CSS3</a><br> 
+                                    </span>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-fill" id="css" style="width: 90%"></div>
+                                    </div>                              
+                                </li>
+                                <li>
+                                    <span>
+                                        <img src="./asset/icons/JavaScript.png" alt="JavaScript" width="30px" height="30px"/>
+                                        <a href="https://github.com/gayalew/my-First-Game" 
+                                        alt="A project done with HTML, CSS & JS(ES6)">JavaScript</a><br> 
+                                    </span>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-fill" id="js" style="width: 80%"></div>
+                                    </div>                               
+                                </li>
+                                <li>
+                                    <span>
+                                        <img src="./asset/icons/ReactJs.png" alt="React.Js" width="30px" height="30px"/>
+                                        <a href="https://github.com/gayalew/Exam-cracked" 
+                                        alt="A project done with React.js">React.js</a><br> 
+                                    </span>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-fill" id="react" style="width: 50%"></div>
+                                    </div>
+                                </li>
+                        
+                            </ul>
+                            <ul>
+                                <h3>Back-end</h3>
+                                <li>
+                                    <span>
+                                        <img src="./asset/icons/NodeJs.png" alt="Node.Js" width="30px" height="30px"/>
+                                        <a href="https://github.com/gayalew/alx_html_css" 
+                                        alt="A project done with NodeJs">Node.js</a><br>
+                                    </span>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-fill" id="nodeJs" style="width: 25%"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>
+                                        <img src="./asset/icons/MongoDB.png" alt="MongoDB" width="30px" height="30px"/>
+                                        <a href="https://github.com/gayalew/alx_html_css" 
+                                        alt="A project done with MongoDB">MongoDB</a><br> 
+                                    </span>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-fill" id="mongoDB" style="width: 25%"></div>
+                                    </div>                              
+                                </li>
+                                <li>
+                                    <span>
+                                        <img src="./asset/icons/mySQL.png" alt="mySQL" width="30px" height="30px"/>
+                                        <a href="https://github.com/gayalew/my-First-Game" 
+                                        alt="A project done with mySQL"> mySQL</a><br> 
+                                    </span>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-fill" id="mySQL" style="width: 80%"></div>
+                                    </div>                               
+                                </li>
+                        
+                            </ul>
+                            <ul>
+                                <h3>Tools</h3>
+                                <li>
+                                    <span>
+                                        <img src="./asset/icons/git.png" alt="Git" width="30px" height="30px"/>
+                                        <a href="#Git" 
+                                        alt="Git"> Git </a> <br> 
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <img src="./asset/icons/github.svg" alt="GitHub" width="30px" height="30px"/>
+                                        <a href="#GitHub" 
+                                        alt="My github Introductory page"> GitHub</a><br> 
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <div>Certification from Udacity in <a href="" alt=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                                <p>Web Development <br>  HTML5, CSS3 and JavaScript(ES6)</p>
+                            </li>
+                            <li>
+                                <div>Free online courses from Udemy<a href="" alt=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                                <p>React.js and Mobile Application developmnet <br></p>
+                            </li>
+                            <li>
+                                <div>Certification from Pluralsight in <a href="" alt=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                                <p>UI/UX <br>  Pluralsight</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="address">
+                        <img src="./asset/address.png" alt="My location" width="350px" height="180px"/>
+                        <h3 id="address-txt">Bahir Dar University, Bahir Dar, Ethiopia</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===== Sevices ===== -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1> 
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>If you're a business owner or organization seeking a well-structured online platform to enhance customer communication, you've come to the right place. Simply share your requirements in the message box below, and I'll be happy to assist you in creating a top-notch solution. </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>You've completed the internal workings of your system, but the user interface remains the crucial gateway to its functionality. I specialize in crafting intuitive and visually appealing designs that optimize user experience. Feel free to share your project details in the message box below.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h2>Mobile-App Development</h2>
+                    <p>I have a proven track record of designing user-friendly, efficient, and secure mobile applications for various purposes. It's your turn to benefit from a cutting-edge app that simplifies your services. Please provide your specific requirements and details in the message box.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ====== portfolio ======-->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title"> My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="asset/Exam-prep.png">
+                    <div class="layer">
+                        <h3>Online-Study Website</h3>
+                        <p>This is my latest project, Online study app, built with React.js. It is very simple to use and has clear user interface.</p>
+                        <a href="https://github.com/gayalew/Exam-cracked"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="asset/Workout-maping.png">
+                    <div class="layer">
+                        <h3>Workout-Mapping App</h3>
+                        <p>This is a web application that enables it's users to record their daily workouts.</p>
+                        <a href="https://github.com/gayalew/Workout-mapping"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="asset/Bank-website.png">
+                    <div class="layer">
+                        <h3>A Bank website</h3>
+                        <p>A website built with JavaScript to enable a customers to create account and know more about their money.</p>
+                        <a href="https://github.com/gayalew/banking-website"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="asset/Online-banking.png">
+                    <div class="layer">
+                        <h3>Online Banking App</h3>
+                        <p>It gives all functionality of banking: Transfer money, Ask a loan and withdraw money.</p>
+                        <a href="#https://github.com/gayalew/online-banking"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="asset/Dice-roll.png">
+                    <div class="layer">
+                        <h3>Dice-rolling Game</h3>
+                        <p>It's a simple dice rolling game built with JavaScript.</p>
+                        <a href="#https://github.com/gayalew/Dice-Rolling-Game"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="asset/web-app.png">
+                    <div class="layer">
+                        <h3>A Static Tour-Guide App </h3>
+                        <p>This is my first website in my programming life. It's aimed to help tours to book their travel online and get update on it.</p>
+                        <a href="https://github.com/gayalew/alx_html_css"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <a href="mailto:getbemnet21@gmail.com" class="btn btn2">Send Email</a>
+                    <p><i class="fa-sharp fa-solid fa-phone"></i><a href="tel:+251926045509"</a>+251926045509</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/gayalew"><i class="fa-brands fa-github"></i></i></a>
+                        <a href="https://t.me/haymanot_7"><i class="fa-brands fa-telegram"></i></i></a>
+                        <a href="https://tiktok.com/@co_oding"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://linkedin.com/in/bemnet-ayalew"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder = "Your Name" required>
+                        <input type="imail" name="Email" placeholder = "Your email" required>
+                        <textarea name="Message"  rows="6" placeholder = "Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Bemnet Ayalew 2024</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+
+           var sidemenu = document.getElementById("sidemenu");
+
+           function openmenu()
+           {
+            sidemenu.style.right = "0";
+           }
+           function closemenu()
+           {
+            sidemenu.style.right = "-200px";
+           }
+    </script>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwsl95Z-i_42E5fiI-kmdRzo2-57Uloh2fPHcbn8yWoHyNW7cOM0wb_vTHiAKsUg_H8/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Massage sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        }, 5000)
+        form.reset()
+  })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</body>
+</html>
