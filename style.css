@@ -20,16 +20,28 @@ body {
 .container {
   padding: 10px 10%;
 }
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  background: #070707;
+  width: 80%;
+  position: fixed;
+  top: 0;
 }
+
+.break {
+  margin: 10px 0;
+}
+
 .logo {
   width: 80px;
   border-radius: 50px;
   margin-top: 15px;
+  padding: 3px;
+  border: #ff004f solid 2px;
 }
 nav ul li {
   display: inline-block;
@@ -68,17 +80,17 @@ nav ul li a:hover::after {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 200px;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  margin: 20px 10px 0 0;
+  margin: 60px 10px 0 0;
 }
 
 .btn-cv {
-  margin-right: 10px;
+  margin-right: 20px;
   background: #ff004f;
   padding: 8px;
   border: none;
@@ -89,9 +101,15 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 {
-  font-size: 30px;
+  font-size: 33px;
+  margin-bottom: 15px;
 }
+
 .header-text h1 span {
+  color: #ff004f;
+}
+
+.header-text p span {
   color: #ff004f;
 }
 
@@ -270,6 +288,7 @@ nav ul li a:hover::after {
 
 #education ul {
   display: flex;
+  overflow: auto;
 }
 
 #education ul li {
@@ -291,7 +310,7 @@ nav ul li a:hover::after {
 }
 
 #education ul li:hover {
-  background: #ff004f;
+  background: linear-gradient(black, black, #ff004f);
   transform: translateY(-10px);
   color: #fff;
 }
@@ -300,8 +319,25 @@ nav ul li a:hover::after {
   margin-top: 10px;
 }
 
-#address-txt {
+.edu-head {
   color: #ff004f;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+#address-txt {
+  color: #f2f2f2;
+}
+
+#address img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#address img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  margin-bottom: 15px;
 }
 
 /*  .......Services........*/
@@ -414,6 +450,8 @@ nav ul li a:hover::after {
   border-radius: 6px;
   text-decoration: none;
   color: #fff;
+  background: none;
+  cursor: pointer;
 }
 .btn:hover {
   background: #ff004f;
@@ -480,6 +518,10 @@ form .btn2 {
   font-weight: 300;
   margin-top: 20px;
 }
+
+.hiden {
+  display: none;
+}
 /* ------------css for small screens---------*/
 
 nav .fa-solid {
@@ -488,7 +530,7 @@ nav .fa-solid {
 
 @media only screen and (max-width: 750px) {
   .header {
-    margin-top: 20%;
+    margin-top: 17%;
     display: block;
   }
 
@@ -499,15 +541,29 @@ nav .fa-solid {
     font-size: 30px;
   }
 
+<<<<<<< HEAD
+  .hero {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav {
+    width: 90%;
+=======
   #hero {
     padding: 50px;
     text-align: center;
+>>>>>>> 2b2b6fb18d0d10279e8e8dc65d447e8757b4cafe
   }
 
   nav .fa-solid {
     display: block;
+    margin-right: 15px;
     font-size: 25px;
   }
+
   nav ul {
     background: #ff004f;
     position: fixed;
@@ -529,6 +585,11 @@ nav .fa-solid {
     left: 25px;
     cursor: pointer;
   }
+
+  .header {
+    margin-top: 100px;
+  }
+
   .sub-title {
     font-size: 40px;
   }
