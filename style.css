@@ -10,6 +10,7 @@ html {
 body {
   background: #070707;
   color: #fff;
+  overflow-x: hidden;
 }
 #header {
   width: 100%;
@@ -30,14 +31,16 @@ nav {
   width: 80%;
   position: fixed;
   top: 0;
+  z-index: 10;
+  padding: 10px 0;
 }
 
 .break {
   margin: 10px 0;
 }
 
-.logo {
-  width: 80px;
+nav img {
+  width: 60px;
   border-radius: 50px;
   margin-top: 15px;
   padding: 3px;
@@ -113,9 +116,10 @@ nav ul li a:hover::after {
   color: #ff004f;
 }
 
-#hero {
+.hero img {
   border-radius: 5px;
   margin-left: 3px;
+  max-width: 100%;
 }
 
 /* --------about--------*/
@@ -541,9 +545,9 @@ nav .fa-solid {
     font-size: 30px;
   }
 
-  .hero {
-    padding: 50px 0;
+  .hero img {
     text-align: center;
+    margin-top: 20px;
   }
 
   nav .fa-solid {
